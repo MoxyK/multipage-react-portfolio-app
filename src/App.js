@@ -1,10 +1,11 @@
+import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home'
+import Home from './pages/Home';
 import Contact from './pages/Contact';
-
 import Project from './pages/Project';
 import Header from "./components/Header";
+import Navbar from './components/Navbar';
 
 // Must be your top level component and render all necessary children components
 
@@ -12,6 +13,7 @@ function App() {
   return (
     <Router>
     <div className="App">
+      <Navbar />
       <Header>
         <Routes>
           <Route path="/" element={<Home name={"Keanu"} title={"Web Developer & Photographer"}/>} />
